@@ -202,48 +202,6 @@ class Jobs extends Component {
         <CssBaseline/>
         <div className={classes.mainContent}>
           <Row>
-            <Col span={6}>
-              <div className={classes.stats}>
-                <Row>
-                  <Col span={10} offset={2}>
-                    <Card>
-                      <CardHeader color="info" text>
-                        <CardText color="info">
-                          <h4 className={classes.cardTitleWhite}>Average PHP</h4>
-                          <h4 className={classes.cardCategoryWhite}>
-                          </h4>
-                        </CardText>
-                      </CardHeader>
-                      <CardBody>
-                        <Table
-                          hover
-                          tableHeadercolor="info"
-                          tableData={[
-                            ["1", "Junior", "€2000 - €3000"],
-                            ["2", "Mid", "€3000 - €4000"],
-                            ["3", "Senior", "€4000 - €6000"],
-                          ]}
-                        />
-                      </CardBody>
-                    </Card>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col span={10} offset={2}>
-                    <Card chart>
-                      <CardHeader color="info">
-                        <Chart />
-                      </CardHeader>
-                      <CardBody>
-                        <h4 className={classes.cardTitle}>PHP dev</h4>
-                        <p className={classes.cardCategory}>Offers number</p>
-                      </CardBody>
-                    </Card>
-                  </Col>
-                </Row>
-              </div>
-            </Col>
-
             <Col span={12}>
               <div className={classes.sidebar}>
                 <div className={classes.sidebarInner}>
@@ -309,10 +267,32 @@ class Jobs extends Component {
                 </div>
               </div>
             </Col>
-            <Col span={6}>
+            <Col span={12}>
               <div className={classes.stats}>
                 <Row>
-                  <Col span={10} offset={1}>
+                  <Col span={11}>
+                    <Card>
+                      <CardHeader color="info" text>
+                        <CardText color="info">
+                          <h4 className={classes.cardTitleWhite}>Stats</h4>
+                          <h4 className={classes.cardCategoryWhite}>
+                          </h4>
+                        </CardText>
+                      </CardHeader>
+                      <CardBody>
+                        <Table
+                          hover
+                          tableHeaderColor="warning"
+                          tableData={[
+                            ["1", "Junior PHP developer", "€2000 - €3000"],
+                            ["1", "Mid PHP developer", "€3000 - €4000"],
+                            ["1", "Senior PHP developer", "€4000 - €6000"],
+                          ]}
+                        />
+                      </CardBody>
+                    </Card>
+                  </Col>
+                  <Col span={11} offset={1}>
                     <Card>
                       <CardHeader color="info" text>
                         <CardText color="info">
@@ -324,7 +304,7 @@ class Jobs extends Component {
                       <CardBody>
                         <Table
                           hover
-                          tableHeadercolor="info"
+                          tableHeaderColor="warning"
                           tableData={[
                             ["1", "HTML", "50%"],
                             ["2", "CSS", "45%"],
@@ -336,8 +316,19 @@ class Jobs extends Component {
                   </Col>
                 </Row>
                 <Row>
-                  <Col span={10} offset={1}>
-                  <Card chart>
+                  <Col span={11}>
+                    <Card chart>
+                      <CardHeader color="warning">
+                        <Chart />
+                      </CardHeader>
+                      <CardBody>
+                        <h4 className={classes.cardTitle}>PHP dev</h4>
+                        <p className={classes.cardCategory}>Offers number</p>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                  <Col span={11} offset={1}>
+                    <Card chart>
                       <CardHeader color="info">
                         <Bar />
                       </CardHeader>
@@ -346,13 +337,11 @@ class Jobs extends Component {
                         <p className={classes.cardCategory}>PHP</p>
                       </CardBody>
                     </Card>
-                    </Col>
+                  </Col>
                 </Row>
               </div>
             </Col>
-
           </Row>
-
         </div>
       </>
     );
